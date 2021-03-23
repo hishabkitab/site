@@ -1,6 +1,6 @@
 <?php
 
-namespace HishabKitab\Site\src\Providers;
+namespace HishabKitab\Site\Providers;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Database\Eloquent\Factory;

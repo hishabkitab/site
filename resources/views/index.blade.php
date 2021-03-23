@@ -1,9 +1,8 @@
-@extends('site::layouts.master')
+@extends('view::layouts.web.site.master')
+
+@push('style')
 
 @section('content')
-    <h1>Hello World</h1>
 
-    <p>
-        This view is loaded from module: {!! config('site.name') !!}
-    </p>
+
 @endsection

@@ -1,6 +1,6 @@
 <?php
 
-namespace HishabKitab\Site\src\Providers;
+namespace HishabKitab\Site\Providers;
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvider;
@@ -12,7 +12,7 @@ class RouteServiceProvider extends ServiceProvider
      *
      * @var string
      */
-    protected $moduleNamespace = 'HishabKitab\Site\src\Http\Controllers';
+    protected $moduleNamespace = 'HishabKitab\Site\Http\Controllers';
 
     /**
      * Called before routes are registered.

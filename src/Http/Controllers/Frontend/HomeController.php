@@ -1,12 +1,12 @@
 <?php
 
-namespace HishabKitab\Site\Http\Controllers;
+namespace HishabKitab\Site\Http\Controllers\Frontend;
 
 use Illuminate\Contracts\Support\Renderable;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
 
-class SiteController extends Controller
+class HomeController extends Controller
 {
     /**
      * Display a listing of the resource.
