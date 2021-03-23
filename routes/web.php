@@ -354,7 +354,9 @@ Route::prefix('site')
             ];
 
             foreach ($resources as $index => $resource) {
-                Route::get($index, [SiteController::class, 'index'])->name('site.resources.' . $index);
+                Route::get($index, function () use($index){
+                    return view('view::site.' . $index);
+                })->name('site.resources.' . $index);
 
                 foreach ($resource as $category => $app) {
                     Route::prefix($index)->group(function () use ($index, $category, $app) {
