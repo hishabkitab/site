@@ -380,4 +380,7 @@ Route::prefix('site')
                    return view('view::site.price');
                 })->name('site.price.index');
             });
+        Route::get('events', function () {
+           return view('view::site.events');
+        })->name('site.events.index');
     });
