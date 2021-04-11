@@ -1,23 +1,37 @@
 {
-    "name": "hishabkitab/site",
-    "description": "",
-    "authors": [
-        {
-            "name": "Hafijul Islam",
-            "email": "hafijul233@gmail.com"
-        }
-    ],
-    "extra": {
-        "laravel": {
-            "providers": [],
-            "aliases": {
-
-            }
-        }
-    },
-    "autoload": {
-        "psr-4": {
-            "HishabKitab\\Site\\": "src/"
-        }
+  "name": "hishabkitab/site",
+  "description": "",
+  "authors": [
+    {
+      "name": "Hafijul Islam",
+      "email": "hafijul233@gmail.com"
     }
+  ],
+  "extra": {
+    "laravel": {
+      "providers": [],
+      "aliases": {}
+    }
+  },
+  "autoload": {
+    "psr-4": {
+      "HishabKitab\\Site\\": "src/",
+      "HishabKitab\\Site\\Database\\Factories\\": "database/factories/",
+      "HishabKitab\\Site\\Database\\Seeders\\": "database/seeders/",
+      "HishabKitab\\Site\\Database\\Migrations\\": "database/migrations/"
+    }
+  },
+  "require": {
+    "santigarcor/laratrust": "^6.3",
+    "mckenziearts/laravel-notify": "^2.1"
+  },
+  "require-dev": {
+  },
+  "config": {
+    "optimize-autoloader": true,
+    "preferred-install": "dist",
+    "sort-packages": true
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
 }

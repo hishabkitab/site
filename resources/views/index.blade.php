@@ -1,4 +1,4 @@
-@extends('view::layouts.site')
+@extends('site::layouts.landing')
 
 @section('title', 'Home')
 
@@ -333,10 +333,35 @@
 @endsection
 
 @push('script')
+	<!-- Components Vendor  -->
+	<script src="{{ asset('assets/vendors/jquery.parallax.js') }}"></script>
+	<script src="{{ asset('assets/vendors/typedjs/typed.min.js') }}"></script>
+	<script src="{{ asset('assets/vendors/slick-carousel/slick.min.js') }}"></script>
+	<script src="{{ asset('assets/vendors/counters/waypoint.min.js') }}"></script>
+	<script src="{{ asset('assets/vendors/counters/counterup.min.js') }}"></script>
 
+
+	<!-- Theme Components and Settings -->
+	<script src="{{ asset('/js/vendors/parallax.js') }}"></script>
+	<script src="{{ asset('/js/vendors/carousel.js') }}"></script>
+	<script src="{{ asset('/js/vendors/counters.js') }}"></script>
+	<!-- END JAVASCRIPTS -->
 @endpush
 
 @push('js')
-
+	<script>
+		$(document).on('ready', function () {
+			// initialization of text animation (typing)
+			$(".js-display-typing").typed({
+				strings: [
+					"Stream",
+					"Creative",
+					"Innovative"
+				],
+				typeSpeed: 60,
+				loop: true,
+				backDelay: 2500
+			});
+		});
+	</script>
 @endpush
-
