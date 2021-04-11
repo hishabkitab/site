@@ -3,8 +3,7 @@
 @section('title', 'Home')
 
 @push('style')
-    <link rel="stylesheet" type="text/css" href="{{ asset('/assets/vendors/font-awesome/css/fontawesome-all.min.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('/assets/vendors/slick-carousel/slick.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('/vendor/slick-carousel/slick/slick.css') }}">
 @endpush
 
 @push('css')
@@ -14,7 +13,7 @@
 @section('promo-block')
     <!-- Promo Block -->
     <section class="js-parallax u-promo-block u-promo-block--mheight-600 u-overlay u-overlay--dark text-white"
-             style="background-image: url(assets/img-temp/1920x1080/img3.jpg);">
+             style="background-image: url('{{ asset('/img/1920x1080/img3.jpg') }}');">
         <!-- Promo Content -->
         <div class="container u-overlay__inner u-ver-center u-content-space">
             <div class="row justify-content-center">
@@ -38,28 +37,28 @@
     <!-- Clients Section -->
     <section class="js-clients u-clients">
         <div class="u-clients__item">
-            <img class="u-clients__image" src="{{ asset('assets/img-temp/partners/img1.png') }}" alt="Image Description">
+            <img class="u-clients__image" src="{{ asset('/img/partners/img1.png') }}" alt="Image Description">
         </div>
         <div class="u-clients__item">
-            <img class="u-clients__image" src="{{ asset('assets/img-temp/partners/img2.png') }}" alt="Image Description">
+            <img class="u-clients__image" src="{{ asset('/img/partners/img2.png') }}" alt="Image Description">
         </div>
         <div class="u-clients__item">
-            <img class="u-clients__image" src="{{ asset('assets/img-temp/partners/img3.png') }}" alt="Image Description">
+            <img class="u-clients__image" src="{{ asset('/img/partners/img3.png') }}" alt="Image Description">
         </div>
         <div class="u-clients__item">
-            <img class="u-clients__image" src="{{ asset('assets/img-temp/partners/img4.png') }}" alt="Image Description">
+            <img class="u-clients__image" src="{{ asset('/img/partners/img4.png') }}" alt="Image Description">
         </div>
         <div class="u-clients__item">
-            <img class="u-clients__image" src="{{ asset('assets/img-temp/partners/img5.png') }}" alt="Image Description">
+            <img class="u-clients__image" src="{{ asset('/img/partners/img5.png') }}" alt="Image Description">
         </div>
         <div class="u-clients__item">
-            <img class="u-clients__image" src="{{ asset('assets/img-temp/partners/img6.png') }}" alt="Image Description">
+            <img class="u-clients__image" src="{{ asset('/img/partners/img6.png') }}" alt="Image Description">
         </div>
         <div class="u-clients__item">
-            <img class="u-clients__image" src="{{ asset('assets/img-temp/partners/img7.png') }}" alt="Image Description">
+            <img class="u-clients__image" src="{{ asset('/img/partners/img7.png') }}" alt="Image Description">
         </div>
         <div class="u-clients__item">
-            <img class="u-clients__image" src="{{ asset('assets/img-temp/partners/img8.png') }}" alt="Image Description">
+            <img class="u-clients__image" src="{{ asset('/img/partners/img8.png') }}" alt="Image Description">
         </div>
     </section>
     <!-- End Clients Section -->
@@ -115,7 +114,7 @@
 
     <!-- Stats -->
     <section class="bg-light position-relative u-hero-img u-overlay u-overlay--dark"
-             style="background-position: 50% 65%; background-image: url(assets/img-temp/1920x1080/img4.jpg);">
+             style="background-position: 50% 65%; background-image: url(/img/1920x1080/img4.jpg);">
         <div class="container u-overlay__inner pt-8">
             <div class="row text-center text-uppercase text-white">
                 <div class="col-lg-3 col-sm-6 pb-8">
@@ -167,7 +166,7 @@
 
                 <!-- Article Image -->
                 <div class="col-lg-6 align-self-center">
-                    <img class="img-fluid rounded" src="{{ asset('assets/img-temp/900x700/img1.png') }}" alt="Image Description">
+                    <img class="img-fluid rounded" src="{{ asset('/img/900x700/img1.png') }}" alt="Image Description">
                 </div>
                 <!-- End Article Image -->
             </div>
@@ -302,7 +301,7 @@
                     <div class="media u-font-size-90">
                         <img
                             class="d-flex align-self-center rounded-circle u-blockquote-v2__image u-box-shadow-lg mx-3 mt-2"
-                            src="{{ asset('assets/img-temp/ava/img2.jpg') }}" alt="Image description">
+                            src="{{ asset('/img/ava/img2.jpg') }}" alt="Image description">
                         <div class="media-body align-self-center">
                             <strong class="d-block">Jane Moris</strong>
                             <span class="u-font-size-75 text-dark">Web Developer</span>
@@ -319,7 +318,7 @@
                     <div class="media u-font-size-90">
                         <img
                             class="d-flex align-self-center rounded-circle u-blockquote-v2__image u-box-shadow-lg mx-3 mt-2"
-                            src="{{ asset('assets/img-temp/ava/img3.jpg') }}" alt="Image description">
+                            src="{{ asset('/img/ava/img3.jpg') }}" alt="Image description">
                         <div class="media-body align-self-center">
                             <strong class="d-block">Bastien Rojanawisut</strong>
                             <span class="u-font-size-75 text-dark">UX/UI Designer</span>

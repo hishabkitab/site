@@ -14,7 +14,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('view::site.home-page');
+        return view('site::index');
     }
 
     /**
