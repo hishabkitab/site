@@ -18,28 +18,48 @@
 		<div class="collapse navbar-collapse" id="navbarTogglerDemo">
 			<ul class="navbar-nav ml-auto mt-1 mt-lg-0">
 				<li class="nav-item mr-4 mb-2 mb-lg-0">
-					<a class="nav-link active" href="home-page.html">Home</a>
-				</li>
-				<li class="nav-item mr-4 mb-2 mb-lg-0">
-					<a class="nav-link" href="services.html">Services</a>
+					<a class="nav-link active" href="{{ route('site.home') }}">Home</a>
 				</li>
 				<li class="nav-item dropdown mr-4 mb-2 mb-lg-0">
-					<a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+					<a class="nav-link" href="#" id="appsDropdown" role="button" data-toggle="dropdown"
 					   aria-haspopup="true" aria-expanded="false">
-						About <i class="far fa-angle-down small ml-1"></i>
+						Apps
+						<i class="far fa-angle-down small ml-1"></i>
 					</a>
-					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+					<div class="dropdown-menu" aria-labelledby="appsDropdown">
 						<a class="dropdown-item" href="about-us.html">About Us</a>
 						<a class="dropdown-item" href="about-me.html">About Me</a>
 					</div>
 				</li>
+				<li class="nav-item dropdown mr-4 mb-2 mb-lg-0">
+					<a class="nav-link" href="#" id="resourcesDropdown" role="button" data-toggle="dropdown"
+					   aria-haspopup="true" aria-expanded="false">
+						Resource
+						<i class="far fa-angle-down small ml-1"></i>
+					</a>
+					<div class="dropdown-menu" aria-labelledby="resourcesDropdown">
+						<a class="dropdown-item" href="{{ route('site.resources.user-guide') }}">User Guide</a>
+						<a class="dropdown-item" href="{{ route('site.resources.documentation') }}">Documentation</a>
+						<a class="dropdown-item" href="{{ route('site.resources.api') }}">APIs</a>
+						<a class="dropdown-item" href="{{ route('site.resources.developer-support') }}">Technical Docs</a>
+					</div>
+				</li>
 				<li class="nav-item mr-4 mb-2 mb-lg-0">
-					<a class="nav-link" href="contacts.html">Contacts</a>
+					<a class="nav-link" href="{{ route('site.forum.index') }}">Forum</a>
+				</li>
+				<li class="nav-item mr-4 mb-2 mb-lg-0">
+					<a class="nav-link" href="{{ route('site.price.index') }}">Price</a>
+				</li>
+				<li class="nav-item mr-4 mb-2 mb-lg-0">
+					<a class="nav-link" href="{{ route('site.events.index') }}">Events</a>
+				</li>
+				<li class="nav-item mr-4 mb-2 mb-lg-0">
+					<a class="nav-link" href="{{ route('site.contacts.index') }}">Contacts</a>
 				</li>
 			</ul>
 			<div>
-				<a class="btn btn-primary" data-toggle="modal" href="#callUsModal">
-					<i class="fas fa-phone-square mr-1"></i> Call Me
+				<a class="text-white" data-toggle="modal" href="#callUsModal">
+					<i class="fas fa-shopping-cart mr-1"></i>
 				</a>
 			</div>
 			<ul class="ml-auto navbar-nav">
@@ -62,7 +82,7 @@
 					@include('view::components.common.logout')
 				@else
 					<li class="nav-item mb-2 mb-lg-0">
-						<a class="nav-link" href="{{ route('login') }}">Join</a>
+						<a class="nav-link" href="{{ route('login') }}">Login/Register</a>
 					</li>
 				@endauth
 			</ul>

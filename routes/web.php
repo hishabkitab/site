@@ -17,84 +17,83 @@ use Illuminate\Support\Facades\Route;
 
 Route::prefix('site')
     ->group(function () {
-        Route::get('/', [SiteController::class, 'index']);
-        //Products
-        Route::prefix('product')
-            ->group(function () {
-                //Apps
-                Route::prefix('apps')->group(function () {
-                    $apps = [
-                        'finance' => [
-                            'accounting',
-                            'invoicing',
-                            'expenses',
-                            'spreadsheet',
-                            'documents',
-                            'sign'],
-                        'sales' => [
-                            'crm',
-                            'sales',
-                            'point-of-sale-shop',
-                            'subscriptions',
-                            'rental',
-                            'amazon-connector'
-                        ],
-                        'websites' => [
-                            'website',
-                            'ecommerce',
-                            'blog',
-                            'forums',
-                            'live-chat',
-                            'elearning',
-                        ],
-                        'inventory&mrp' => [
-                            'inventory',
-                            'manufacturing',
-                            'plm',
-                            'purchase',
-                            'maintenance',
-                            'quality',
+        Route::get('/', [SiteController::class, 'index'])->name('site.home');
 
-                        ],
-                        'human-resources' => [
-                            'employees',
-                            'recruitment',
-                            'time-off',
-                            'appraisals',
-                            'referrals',
-                            'fleet',
-                        ],
-                        'marketing' => [
-                            'social-marketing',
-                            'email-marketing',
-                            'sms-marketing',
-                            'events',
-                            'marketing-automation',
-                            'surveys',
-                        ],
-                        'services' => [
-                            'project',
-                            'timesheet',
-                            'field-service',
-                            'helpdesk',
-                            'planning',
-                            'appointments',
-                        ],
-                        'productivity' => [
-                            'discuss',
-                            'approvals',
-                            'iot',
-                        ],
-                    ];
-                    foreach ($apps as $category => $app) {
-                        Route::prefix($category)->group(function () use ($category, $app) {
-                            foreach ($app as $title) {
-                                Route::get($title, [SiteController::class, 'show'])->name('site.product.apps.' . $category . '.' . $title);
-                            }
-                        });
+        //Apps
+        Route::prefix('products')
+            ->group(function () {
+            $apps = [
+                'finance' => [
+                    'accounting',
+                    'invoicing',
+                    'expenses',
+                    'spreadsheet',
+                    'documents',
+                    'sign'],
+                'sales' => [
+                    'crm',
+                    'sales',
+                    'point-of-sale-shop',
+                    'subscriptions',
+                    'rental',
+                    'amazon-connector'
+                ],
+                'websites' => [
+                    'website',
+                    'ecommerce',
+                    'blog',
+                    'forums',
+                    'live-chat',
+                    'elearning',
+                ],
+                'inventory&mrp' => [
+                    'inventory',
+                    'manufacturing',
+                    'plm',
+                    'purchase',
+                    'maintenance',
+                    'quality',
+
+                ],
+                'human-resources' => [
+                    'employees',
+                    'recruitment',
+                    'time-off',
+                    'appraisals',
+                    'referrals',
+                    'fleet',
+                ],
+                'marketing' => [
+                    'social-marketing',
+                    'email-marketing',
+                    'sms-marketing',
+                    'events',
+                    'marketing-automation',
+                    'surveys',
+                ],
+                'services' => [
+                    'project',
+                    'timesheet',
+                    'field-service',
+                    'helpdesk',
+                    'planning',
+                    'appointments',
+                ],
+                'productivity' => [
+                    'discuss',
+                    'approvals',
+                    'iot',
+                ],
+            ];
+            foreach ($apps as $category => $app) {
+                Route::prefix($category)->group(function () use ($category, $app) {
+                    foreach ($app as $title) {
+                        Route::get($title, [SiteController::class, 'show'])->name('site.products.' . $category . '.' . $title);
                     }
                 });
-            });
+            }
+        });
+
         //Resources
         Route::prefix('resources')
             ->group(function () {
@@ -367,6 +366,7 @@ Route::prefix('site')
                     }
                 }
             });
+
         //Forum
         Route::prefix('forum')
             ->group(function () {
@@ -374,13 +374,23 @@ Route::prefix('site')
                     return view('view::site.forum');
                 })->name('site.forum.index');
             });
+
+        //Package & Prices
         Route::prefix('price')
             ->group(function () {
                 Route::get('/', function () {
                     return view('view::site.price');
                 })->name('site.price.index');
             });
+
+        //Events
         Route::get('events', function () {
             return view('view::site.events');
         })->name('site.events.index');
+
+        //Events
+        Route::get('contacts', function () {
+            return view('view::site.events');
+        })->name('site.contacts.index');
+
     });
